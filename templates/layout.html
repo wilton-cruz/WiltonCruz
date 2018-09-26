@@ -8,10 +8,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>{% block title %}{% endblock %} - My Webpage</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='normalize.css') }}">
-    <link href="https://file.myfontastic.com/cKAa8oNxntZBMg5VzbrQbW/icons.css" rel="stylesheet">
-    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
-    <link rel="shortcut icon" href="{{ url_for('static', filename='python.png') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='app.css') }}">
+    <link rel="shortcut icon" href="{{ url_for('static', filename='img/pythonLogo1.svg') }}">
     
   {% endblock %}
   </head>
@@ -21,23 +19,11 @@
     <nav>
       {% block nav %}
       <div class="top-nav">
-        <div class="logo-wrap">
-            <a href="{{ url_for('index')}}" class="logo">your logo</a>
-            
-                    <ul class="social-icons">
-                    <li><a class="icon-facebook" href="#"></a></li>
-                    <li><a class="icon-instagram" href="#"></a></li>
-                    <li><a class="icon-twitter" href="#"></a></li>
-                    </ul>
-        </div>
-
         <ul class="menu">
-
           <li><a href="{{ url_for('index')}}">home</a></li>
           <li><a href="{{ url_for('about')}}">about</a></li>
           <li><a href="{{ url_for('portfolio')}}">portfolio</a></li>
           <li><a href="{{ url_for('contact')}}">contact</a></li>
-
         </ul>
       </div>
       {% endblock nav%}
